@@ -1,19 +1,19 @@
 /* Construindo algoritmo de busca binária. */
 
 const binarySearch = (list, item) => {
-    let firstValue = 0;
-    let lastValue = list.length - 1;
+    let leftIndex = 0;
+    let rightIndex = list.length - 1;
   
-    while (firstValue <= lastValue) {
-      middle = Math.floor((firstValue + lastValue) / 2);
+    while (leftIndex <= rightIndex) {
+      middle = Math.floor((leftIndex + rightIndex) / 2);
       let kick = list[middle];
       if (kick === item) {
         return middle;
       }
       if (kick > item) {
-        lastValue = middle - 1;
+        rightIndex = middle - 1;
       } else {
-        firstValue = middle + 1;
+        leftIndex = middle + 1;
       }
     }
     return null;
