@@ -1,19 +1,19 @@
 /* Construindo algoritmo de busca binária. */
 
 const binarySearch = (list, item) => {
-    let firstValue = 0;
-    let lastValue = list.length - 1;
+    let leftIndex = 0;
+    let rightIndex = list.length - 1;
   
-    while (firstValue <= lastValue) {
-      middle = Math.floor((firstValue + lastValue) / 2);
+    while (leftIndex <= rightIndex) {
+      middle = Math.floor((leftIndex + rightIndex) / 2);
       let kick = list[middle];
       if (kick === item) {
         return middle;
       }
       if (kick > item) {
-        lastValue = middle - 1;
+        rightIndex = middle - 1;
       } else {
-        firstValue = middle + 1;
+        leftIndex = middle + 1;
       }
     }
     return null;
@@ -25,3 +25,8 @@ const binarySearch = (list, item) => {
   
   console.log(binarySearch(myList, 10));
   
+
+// A busca binária otimiza a alocação de memória, e a rapidez do algoritmo
+// binary search tem o tempo de execução O(log n). exemplo: em uma lista de 10 elementos
+// o algoritmo no pior dos casos, vai percorrer 5 vezes ate encontar o elemento procurado.
+// enquanto na busca linear, o algoritmo na mesma lista, vai percorrer os 10 elementos.
