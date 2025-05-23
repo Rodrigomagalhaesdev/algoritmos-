@@ -36,11 +36,11 @@ const readNumberFornamesStartingWith = (phoneBook) => {
 
 const phoneBook = [
   {
-    name: "Alice",
+    name: "Valter",
     phoneNumber: "132-456-8790",
   },
   {
-    name: "Roline",
+    name: "Antonio",
     phoneNumber: "954-244-5698",
   },
   {
@@ -62,9 +62,9 @@ console.log(readAllNumbers(phoneBook));
 console.log('--------------------------------------------------')
 
 
-const aliceNumber = findPhoneNumberByName(phoneBook, 'alice');
-const aliceOwner = findOwnerByPhoneNumber(phoneBook, "132-456-8790");
-console.log(aliceNumber);
-console.log(aliceOwner);
+const valterNumber = findPhoneNumberByName(phoneBook, 'Valter');
+const valterOwner = findOwnerByPhoneNumber(phoneBook, "132-456-8790");
+console.log(valterNumber);
+console.log(valterOwner);
 
 readNumberFornamesStartingWith(phoneBook);
